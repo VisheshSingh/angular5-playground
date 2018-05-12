@@ -24,7 +24,8 @@ export class UsersComponent implements OnInit {
             street: "50th Main Street",
             city: "Boston",
             state: "MA"
-          }
+          },
+          image: "https://placeimg.com/600/600/people/1"
         },
         {
           firstName: "Kayla",
@@ -34,7 +35,8 @@ export class UsersComponent implements OnInit {
             street: "12th Harold Street",
             city: "Brighton",
             state: "OK"
-          }
+          },
+          image: "https://placeimg.com/600/600/people/2"
         },
         {
           firstName: "Henry",
@@ -44,11 +46,8 @@ export class UsersComponent implements OnInit {
             street: "6th Broadway Street",
             city: "New York",
             state: "NY"
-          }
-        },
-        {
-          firstName: "Mira",
-          lastName: "Rajput"
+          },
+          image: "https://placeimg.com/600/600/people/3"
         }
       ];
 
