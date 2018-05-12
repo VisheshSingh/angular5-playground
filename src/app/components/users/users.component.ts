@@ -38,31 +38,23 @@ export class UsersComponent implements OnInit {
         },
         {
           firstName: "Henry",
-          lastName: "Admas",
+          lastName: "Adams",
           age: 28,
           address: {
             street: "6th Broadway Street",
             city: "New York",
             state: "NY"
           }
+        },
+        {
+          firstName: "Mira",
+          lastName: "Rajput"
         }
       ];
 
       this.loaded = true;
     }, 2000);
 
-    this.showExtended = false;
-
-    // this.addUser({
-    //   firstName: "Mira",
-    //   lastName: "Kalyan",
-    //   age: 22,
-    //   address: {
-    //     street: "Harison Street",
-    //     city: "Princeton",
-    //     state: "NJ"
-    //   }
-    // });
   }
 
   addUser(user) {
