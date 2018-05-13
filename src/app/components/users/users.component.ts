@@ -8,7 +8,7 @@ import { User } from "../../models/User";
 })
 export class UsersComponent implements OnInit {
   users: User[];
-  showExtended: boolean = false;
+  showExtended: boolean = true;
   loaded: boolean = false;
   enableAdd: boolean = false;
   isActive: boolean = true;
@@ -27,7 +27,8 @@ export class UsersComponent implements OnInit {
             city: "Boston",
             state: "MA"
           },
-          joined: new Date("02/15/2018")
+          joined: new Date("02/15/2018"),
+          hide: true
         },
         {
           firstName: "Kayla",
@@ -38,7 +39,8 @@ export class UsersComponent implements OnInit {
             city: "Brighton",
             state: "OK"
           },
-          joined: new Date("02/21/2018")
+          joined: new Date("02/21/2018"),
+          hide: true
         },
         {
           firstName: "Henry",
@@ -49,7 +51,8 @@ export class UsersComponent implements OnInit {
             city: "New York",
             state: "NY"
           },
-          joined: new Date("03/01/2018")
+          joined: new Date("03/01/2018"),
+          hide: true
         }
       ];
 
@@ -60,5 +63,9 @@ export class UsersComponent implements OnInit {
 
   addUser(user) {
     this.users.unshift(user);
+  }
+
+  toggleUser(user: User) {
+    user.hide = !user.hide;
   }
 }

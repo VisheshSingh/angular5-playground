@@ -9,4 +9,5 @@ export interface User {
   };
   joined?: any;
   isActive?: boolean;
+  hide?: boolean;
 }
