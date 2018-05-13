@@ -21,4 +21,8 @@ export class PostsComponent implements OnInit {
       this.posts = posts;
     });
   }
+
+  onNewPost(post: Post) {
+    this.posts.unshift(post);
+  }
 }
