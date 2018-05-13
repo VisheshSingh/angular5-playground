@@ -8,8 +8,10 @@ import { User } from "../../models/User";
 })
 export class UsersComponent implements OnInit {
   users: User[];
-  showExtended: boolean = true;
+  showExtended: boolean = false;
   loaded: boolean = false;
+  enableAdd: boolean = false;
+  isActive: boolean = true;
 
   constructor() {}
 
@@ -25,7 +27,7 @@ export class UsersComponent implements OnInit {
             city: "Boston",
             state: "MA"
           },
-          image: "https://placeimg.com/600/600/people/1"
+          joined: new Date("02/15/2018")
         },
         {
           firstName: "Kayla",
@@ -36,7 +38,7 @@ export class UsersComponent implements OnInit {
             city: "Brighton",
             state: "OK"
           },
-          image: "https://placeimg.com/600/600/people/2"
+          joined: new Date("02/21/2018")
         },
         {
           firstName: "Henry",
@@ -47,13 +49,13 @@ export class UsersComponent implements OnInit {
             city: "New York",
             state: "NY"
           },
-          image: "https://placeimg.com/600/600/people/3"
+          joined: new Date("03/01/2018")
         }
       ];
 
       this.loaded = true;
+      this.enableAdd = true;
     }, 2000);
-
   }
 
   addUser(user) {
